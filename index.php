@@ -1,4 +1,4 @@
-!<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,19 +8,12 @@
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="css/base.css">
 </head>
-<body>
-<header>
-    <h1>PHP Class - Reabroi's Website</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="/">Homepage</a></li>
-        <li><a href="#">Loop</a> </li>
-        <li><a href="#">Countdown</a> </li>
-        <li><a href="#">Other</a> </li>
 
-    </ul>
-</nav>
+<body>
+<header><?php include 'includes/header.php'?></header>
+
+<nav><?php include 'includes/nav.php'?></nav>
+
 <main>
     <img src="img/me.PNG" alt="picture of myself">
     <p>2 years of learning about coding and always can't remember the code I wrote it down.</p>
@@ -28,7 +21,7 @@
 
 </main>
 <footer>
-    <h6>&copy; 2024 Reabroi.com</h6>
+    <?php include 'includes/footer.php'?>
 </footer>
 </body>
 </html>
