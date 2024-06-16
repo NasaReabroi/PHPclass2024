@@ -4,8 +4,27 @@ $secPerMin = 60;
 $secPerHour = 60 * $secPerMin;
 $secPerDay = 24 * $secPerHour;
 $secPerYear = 365 * $secPerDay;
-
+//current time
 $now = time();
+
+//burning man time
+$burningman = mktime(12,0,0,6,15,2024);
+
+//number os seconds between now and then
+$seconds = $burningman - $now;
+
+$Years = floor($seconds/$secPerYear);
+$seconds = $seconds -($Years * $secPerYear);
+
+$Days = floor($seconds/$secPerDay);
+$seconds = $seconds -($Days * $secPerDay);
+
+$Hours = floor($seconds/$secPerHour);
+$seconds = $seconds -($Hours * $secPerHour);
+
+$Minutes = floor($seconds/$secPerMin);
+$seconds = $seconds -($Minutes * $secPerMin);
+
 
 ?>
 
@@ -25,7 +44,8 @@ $now = time();
 <nav><?php include '../includes/nav.php'?></nav>
 
 <main>
-    <?=$now ?>
+    <h3>Burning Man Countdown</h3>
+    <p>years:<?=$Years ?> | Days:<?=$Days ?> | Hours:<?=$Hours ?> | Minutes:<?=$Minutes ?> | Second s:<?=$seconds ?></p>
 </main>
 
 <footer>
