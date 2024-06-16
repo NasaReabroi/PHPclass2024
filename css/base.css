@@ -17,6 +17,7 @@ main {
     float: left;
     font-size: large;
     text-align: center;
+    min-height:400px ;
 }
 
 main img {
