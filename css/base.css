@@ -79,6 +79,7 @@ li:last-child {
 
 
 /*game dice rolls*/
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -91,4 +92,9 @@ li:last-child {
     width: 120px;
     height: 120px;
     margin-top: 10px;
+}
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
 }
