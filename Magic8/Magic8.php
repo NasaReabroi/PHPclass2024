@@ -36,11 +36,11 @@ if(question=="") {
     $answer ="Ask me a Question";
 }elseif(substr($question,-1) !="?") {
     $answer ="Ask me with a Question Mark????";
-    }elseif($PrevQuest==$question){
+}elseif($PrevQuest==$question){
     $answer ="Please ask a New Question!!!!";
 }else{
     $iResponse = mt_rand(0,14);
-    $answer =$responses[4];
+    $answer =$responses[$iResponse];
     $_SESSION["PrevQuest"] = $question;
 }
 
