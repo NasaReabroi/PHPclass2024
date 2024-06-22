@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
     <?php endif; ?>
 
     <form method="post" action="">
-        <input type="submit" value="Roll Again">
+        <input type="submit" value="Reset">
     </form>
 </main>
 
