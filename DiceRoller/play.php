@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
         <div class="player">
             <h2>Player</h2>
             <form action="" method="post">
-                <button type="submit" name="Roll">Roll Dice</button>
+                <button type="submit" name="roll">Roll Dice</button>
             </form>
             <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
                 <p>Your Score: <?php echo $player_score; ?></p>
