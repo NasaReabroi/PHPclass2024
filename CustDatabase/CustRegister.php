@@ -1,5 +1,4 @@
 <?php
-<?php
 
 if(isset($_POST["txtFirstName"])){
     if(isset($_POST["txtLastName"])){
@@ -50,7 +49,7 @@ if(isset($_POST["txtFirstName"])){
 <form method="post">
  <table border="1" width="80%">
     <tr height="60px">
-        <td colspan="2"><h3>Add New Movie</h3></td>
+        <td colspan="2"><h3>Create Account</h3></td>
     </tr>
     <tr height="60px">
         <th>Movie Name</th>
@@ -62,7 +61,7 @@ if(isset($_POST["txtFirstName"])){
     </tr>
     <tr height="60px">
         <td colspan="2">
-            <input type="submit" value="Add New Movie">
+            <input type="submit" value="Submit">
         </td>
     </tr>
  </table>

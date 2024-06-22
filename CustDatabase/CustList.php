@@ -18,7 +18,7 @@
 <nav><?php include '../includes/nav.php'?></nav>
 
 <main>
-    <h3>My Movie List</h3>
+    <h3>Customer Listing</h3>
     <table  border="1" width="80%">
         <tr>
             <td>CustomerID</td>
