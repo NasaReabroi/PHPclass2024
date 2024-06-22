@@ -71,7 +71,7 @@ if(question=="") {
     <p>Ask a Question:<br />
     <form method="get" action=""magic8.php>
         <input type="text" name="txtQuestion" id="txtQuestion"></p>
-        <input type="submit" value=""Ask the 8 Ball">
+        <input type="submit" value="Ask the 8 Ball">
     </form>
 </main>
 
