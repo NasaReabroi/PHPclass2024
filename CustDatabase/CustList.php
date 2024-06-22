@@ -34,9 +34,6 @@
         </tr>
         <?php
 
-        //test database//
-
-
 
         $dsn ='mysql:host=10.6.112.165;dbname=phpclass';
           $username = 'dbuser';
@@ -47,7 +44,7 @@
         try {
             $db = new PDO($dsn, $username, $password, $options);
 
-            $sql = $db->prepare("select * from CustDatabase");
+            $sql = $db->prepare("select * from CustTable");
             $sql->execute();
             $row = $sql->fetch();
 
