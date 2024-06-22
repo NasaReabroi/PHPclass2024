@@ -76,7 +76,7 @@
         ?>
     </table>
     <br /><br />
-    <a href="CustRegister.phpd.php">Create Account</a>
+    <a href="CustRegister.php">Create Account</a>
 
 
 </main>
