@@ -1,7 +1,7 @@
 <?php
 class Car {
     public $color;
-    public $maker;
+    public $make;
     public $model;
     public $year;
     public $status;
