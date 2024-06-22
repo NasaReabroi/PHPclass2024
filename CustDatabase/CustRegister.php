@@ -1,10 +1,10 @@
 <?php
 <?php
 
-if(isset($_POST["txtTitle"])){
-    if(isset($_POST["txtRating"])){
-        $title = $_POST["txtTitle"];
-        $rating = $_POST["txtRating"];
+if(isset($_POST["txtFirstName"])){
+    if(isset($_POST["txtLastName"])){
+        $Fname = $_POST["txtFirstName"];
+        $Lname = $_POST["txtLastName"];
 
     //Database Stuff//
         include '../includes/dbConn.php';
@@ -13,8 +13,8 @@ if(isset($_POST["txtTitle"])){
             $db = new PDO($dsn, $username, $password, $options);
             $sql = $db->prepare("insert into CustDatabase (CustomerID,FirstName,LastName,Address,City,State,Zip,Phone,Email,Password) 
                                                           VALUE(:CustomerID,FirstName,LastName,Address,City,State,Zip,Phone,Email,Password)");
-            $sql->bindValue(":Title",$title);
-            $sql->bindValue(":Rating",$rating);
+            $sql->bindValue(":FirstName",$Fname);
+            $sql->bindValue(":LastName",$Lname);
 
             $sql->execute();
         }catch (PDOException $e){
