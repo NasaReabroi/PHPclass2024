@@ -34,7 +34,7 @@ $myCar->make = 'Jeep';
 $myCar->model ='Wrangler';
 $myCar->year ='2010';
 
-echo "My " . $myCar->make . " is a " . $myCar->year . "<br .><br />><br />>";
+echo "My " . $myCar->make . " is a " . $myCar->year . "<br .><br /><br />";
 echo $myCar->reverse();
 echo "<br /><br /><br />";
 echo  $myCar->status;
