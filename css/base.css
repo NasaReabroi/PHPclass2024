@@ -89,8 +89,8 @@ li:last-child {
     text-align: center;
 }
 .player img, .computer img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-top: 10px;
 }
 .result {
