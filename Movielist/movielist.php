@@ -19,6 +19,12 @@
 
 <main>
 <h3>My Movie List</h3>
+    <table border="1" width="80%">
+        <tr>
+            <td>Key</td>
+            <td>Movie Title</td>
+            <td>Rating</td>
+        </tr>
     <?php
 
     //test database//
@@ -34,12 +40,21 @@
     try {
         $db = new PDO($dsn, $username, $password, $options);
 
-
         $sql = $db->prepare("select * from Movielist");
         $sql->execute();
         $row = $sql->fetch();
 
-        echo $row["movieTitle"];
+        while ($row!=null) {
+           echo"<tr>";
+            echo"<td>" . $row["movieID"] . "</td>";
+            echo"<td>" . $row["movieTitle"] . "</td>";
+            echo"<td>" . $row["movieRating"] . "</td>";
+          echo" </tr>";
+
+
+        echo $row["movieRating"];
+            $row = $sql->fetch();
+        }
 
 
 
@@ -49,17 +64,8 @@
     }
 
     ?>
-    <table>
-        <tr>
-            <td>Key</td>
-            <td>Movie Title</td>
-            <td>Rating</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>The Blob</td>
-            <td>PG</td>
-        </tr>
+
+
     </table>
 
 

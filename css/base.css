@@ -77,6 +77,10 @@ li:last-child {
     border-bottom: none;
 }
 
+table {
+    margin: auto;
+}
+
 
 /*game dice rolls*/
 
