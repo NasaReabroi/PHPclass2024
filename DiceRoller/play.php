@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
             </form>
             <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
                 <p>Your Score: <?php echo $player_score; ?></p>
-                <img src="img/Dice_<?php echo $player_roll1; ?>.png" alt="Dice <?php echo $player_roll1; ?>">
-                <img src="img/Dice_<?php echo $player_roll2; ?>.png" alt="Dice <?php echo $player_roll2; ?>">
+                <img src="Dice_<?php echo $player_roll1; ?>.png" alt="Dice <?php echo $player_roll1; ?>">
+                <img src="Dice_<?php echo $player_roll2; ?>.png" alt="Dice <?php echo $player_roll2; ?>">
             <?php endif; ?>
         </div>
 
@@ -69,11 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
             <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
                 <?php for ($i = 0; $i < 3; $i++): ?>
                     <?php $computer_roll = rollDice(); ?>
-                    <img src="img/Dice_<?php echo $computer_roll; ?>.png" alt="Computer Dice <?php echo $computer_roll; ?>">
+                    <img src="Dice_<?php echo $computer_roll; ?>.png" alt="Computer Dice <?php echo $computer_roll; ?>">
                 <?php endfor; ?>
             <?php endif; ?>
         </div>
     </div>
+
     <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
         <p class="result"><?php echo $result; ?></p>
     <?php endif; ?>
