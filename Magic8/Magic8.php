@@ -1,19 +1,8 @@
 <?php
 session_start();
 
-
-if(isset($_POST["txtQuestion"])) {
-    $question = $_POST["txtQuestion"];
-}else{
-    $question ="";
-}
-
-if(isset($_SESSION["PrevQuest"])){
-    $PrevQuest = $_SESSION["PrevQuest"];
-}else{
-    $PrevQuest ="";
-}
-
+$question = isset($_POST["txtQuestion"]) ? $_POST["txtQuestion"] : "";
+$PrevQuest = isset($_SESSION["PrevQuest"]) ? $_SESSION["PrevQuest"] : "";
 
 $responses = array();
 $responses [0] = "Ask again later";
