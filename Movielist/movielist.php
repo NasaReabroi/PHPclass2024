@@ -19,7 +19,7 @@
 
 <main>
 <h3>My Movie List</h3>
-    <table border="1" width="80%">
+    <table  border="1" width="80%">
         <tr>
             <td>Key</td>
             <td>Movie Title</td>
@@ -64,9 +64,9 @@
     }
 
     ?>
-
-
     </table>
+    <br /><br />
+    <a href="movieadd.php">Add New Movie</a>
 
 
 </main>

@@ -1,0 +1,75 @@
+<?php
+
+if(isset($_POST["txtTitle"])){
+    if(isset($_POST["txtRating"])){
+
+        $title = $_POST["txtTitle"];
+        $rating = $_POST["txtRating"];
+
+    //Database Stuff//
+        include '../includes/dbConn.php';
+
+        try {
+            $db = new PDO($dsn, $username, $password, $options);
+            $sql = $db->prepare("insert into movielist (movieTitle,movieRating) VALUE(:Title,:Rating)");
+            $sql->bindValue(":Title",$title);
+            $sql->bindValue(":Rating",$rating);
+            $sql->execute();
+        }catch (PDOException $e){
+            $error =$e->getMessage();
+            echo "Error $error";
+        }
+
+    exit();
+    }
+}
+
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+
+</head>
+
+<body>
+<header><?php include '../includes/header.php'?></header>
+<nav><?php include '../includes/nav.php'?></nav>
+
+<main>
+<form method="post">
+ <table border="1" width="80%">
+    <tr height="60px">
+        <td colspan="2"><h3>Add New Movie</h3></td>
+    </tr>
+    <tr height="60px">
+        <th>Movie Name</th>
+        <td><input id=textTitle" name="txtTitle" Type="text" size="50"></td>
+    </tr>
+    <tr height="60px">
+        <th>Movie Rating</th>
+        <td><input id="txtRating" name="txtRating" type=text" size="50"></td>
+    </tr>
+    <tr height="60px">
+        <td colspan="2">
+            <input type="submit" value="Add New Movie">
+        </td>
+    </tr>
+ </table>
+    </form>
+</main>
+
+<footer>
+    <?php include '../includes/footer.php'?>
+</footer>
+
+</body>
+</html>
