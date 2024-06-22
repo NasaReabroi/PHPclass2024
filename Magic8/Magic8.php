@@ -1,8 +1,19 @@
 <?php
 session_start();
 
-$question = isset($_POST["txtQuestion"]) ? $_POST["txtQuestion"] : "";
-$PrevQuest = isset($_SESSION["PrevQuest"]) ? $_SESSION["PrevQuest"] : "";
+
+if(isset($_POST["txtQuestion"])) {
+    $question = $_POST["txtQuestion"];
+}else{
+    $question ="";
+}
+
+if(isset($_SESSION["PrevQuest"])){
+    $PrevQuest = $_SESSION["PrevQuest"];
+}else{
+    $PrevQuest ="";
+}
+
 
 $responses = array();
 $responses [0] = "Ask again later";
@@ -53,9 +64,9 @@ if($question=="") {
 <nav><?php include '../includes/nav.php'?></nav>
 
 <main>
-    <h2>Magic8 ball</h2>
+    <h2>Magic 8 ball</h2>
     <br />
-    <marquee>Ask me a question</marquee>
+    <marquee><?=$answer?></marquee>
     <br />
     <p>Ask a Question:<br />
     <form method="post" action="Magic8.php">
