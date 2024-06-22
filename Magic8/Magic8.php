@@ -11,13 +11,9 @@ if(isset($_POST["txtQuestion"])) {
 if(isset($_SESSION["PrevQuest"])){
     $PrevQuest = $_SESSION["PrevQuest"];
 }else{
-    $question ="";
+    $PrevQuest ="";
 }
 
-$question ="Ask me a question?";
-echo substr($question,-1);
-
-exit();
 
 $responses = array();
 $responses [0] = "Ask again later";

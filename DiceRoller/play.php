@@ -46,7 +46,6 @@ if (isset($_POST['roll'])) {
 <header><?php include '../includes/header.php'?></header>
 <nav><?php include '../includes/nav.php'?></nav>
 <main>
-
     <h1>Dice Roller Game</h1>
     <div class="container">
         <div class="player">
@@ -60,13 +59,19 @@ if (isset($_POST['roll'])) {
                 <img src="dice<?php echo $player_roll; ?>.png" alt="Dice Roll">
             <?php endif; ?>
         </div>
-
         <div class="computer">
             <h2>Computer</h2>
             <p>Computer's Score: <?php echo isset($_COOKIE['computer_score']) ? $_COOKIE['computer_score'] : 0; ?></p>
+            <?php if (isset($_POST['roll'])): ?>
+                <?php $computer_score = 0; ?>
+                <?php for ($i = 0; $i < 3; $i++): ?>
+                    <?php $computer_roll = rollDice(); ?>
+                    <?php $computer_score += $computer_roll; ?>
+                    <img src="dice<?php echo $computer_roll; ?>.png" alt="Computer Dice Roll">
+                <?php endfor; ?>
+            <?php endif; ?>
         </div>
     </div>
-
     <form method="post" action="">
         <input type="submit" value="Roll Again">
     </form>
