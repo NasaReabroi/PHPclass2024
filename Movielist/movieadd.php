@@ -2,7 +2,6 @@
 
 if(isset($_POST["txtTitle"])){
     if(isset($_POST["txtRating"])){
-
         $title = $_POST["txtTitle"];
         $rating = $_POST["txtRating"];
 
@@ -11,16 +10,17 @@ if(isset($_POST["txtTitle"])){
 
         try {
             $db = new PDO($dsn, $username, $password, $options);
-            $sql = $db->prepare("insert into movielist (movieTitle,movieRating) VALUE(:Title,:Rating)");
+            $sql = $db->prepare("insert into Movielist (movieTitle,movieRating) VALUE(:Title,:Rating)");
             $sql->bindValue(":Title",$title);
             $sql->bindValue(":Rating",$rating);
+
             $sql->execute();
         }catch (PDOException $e){
             $error =$e->getMessage();
             echo "Error $error";
         }
 
-    exit();
+    header("Location:movielist.php");
     }
 }
 
