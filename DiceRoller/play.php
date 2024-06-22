@@ -40,10 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Game</title>
-    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
 <header><?php include '../includes/header.php'?></header>
@@ -52,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
 <main>
     <h1>Dice Roller Game</h1>
     <div class="container">
-
         <div class="player">
             <h2>Player</h2>
             <form action="" method="post">
@@ -60,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
             </form>
             <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
                 <p>Your Score: <?php echo $player_score; ?></p>
-                <img src="img/Dice_<?php echo $player_roll1; ?>.png" alt="Dice Roll">
-                <img src="img/Dice_<?php echo $player_roll2; ?>.png" alt="Dice Roll">
+                <img src="img/Dice_<?php echo $player_roll1; ?>.png" alt="Dice <?php echo $player_roll1; ?>">
+                <img src="img/Dice_<?php echo $player_roll2; ?>.png" alt="Dice <?php echo $player_roll2; ?>">
             <?php endif; ?>
         </div>
 
@@ -71,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])) {
             <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['roll'])): ?>
                 <?php for ($i = 0; $i < 3; $i++): ?>
                     <?php $computer_roll = rollDice(); ?>
-                    <img src="img/Dice_<?php echo $computer_roll; ?>.png" alt="Computer Dice Roll">
+                    <img src="img/Dice_<?php echo $computer_roll; ?>.png" alt="Computer Dice <?php echo $computer_roll; ?>">
                 <?php endfor; ?>
             <?php endif; ?>
         </div>
