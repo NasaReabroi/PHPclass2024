@@ -70,8 +70,8 @@ if($question=="") {
     <br />
     <p>Ask a Question:<br />
     <form method="post" action="Magic8.php">
-    <input type="text" name="txtQuestion" id="txtQuestion"></p>
-        <input type="submit" value="Ask the 8 Ball">
+    <input type="text" name="txtQuestion" id="txtQuestion" value="<?=$question?>></p>
+    <input type="submit" value="Ask the 8 Ball">
     </form>
 </main>
 
